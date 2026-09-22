@@ -1,0 +1,775 @@
+here<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYST - Luxury Customised Chocolates & Gifts</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.postimg.cc/Y2QRSY5n/Airbrush-IMAGE-ENHANCER-1790025965960-1790025965962.jpg" type="image/jpeg">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0b0c10;
+            color: #e2e8f0;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* TYPOGRAPHY */
+        .font-luxury {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-text {
+            background: linear-gradient(135deg, #FBE5B5 0%, #D8A552 50%, #9E7022 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* BUTTONS */
+        .gold-btn {
+            background: linear-gradient(135deg, #FBE5B5 0%, #D8A552 50%, #B8860B 100%);
+            color: #0b0c10;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 800;
+            padding: 16px 36px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(216, 165, 82, 0.35);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .gold-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(216, 165, 82, 0.5);
+            filter: brightness(1.08);
+        }
+
+        /* CONTAINER & CARDS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .card {
+            background: rgba(20, 22, 28, 0.85);
+            border: 1px solid rgba(216, 165, 82, 0.22);
+            border-radius: 24px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: rgba(216, 165, 82, 0.5);
+            transform: translateY(-4px);
+        }
+
+        /* HEADER (Sirf Logo & Brand Name) */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .logo-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1.5px solid rgba(216, 165, 82, 0.4);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .brand-title {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 60px 0 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .hero-left {
+            flex: 1 1 500px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(216, 165, 82, 0.1);
+            border: 1px solid rgba(216, 165, 82, 0.3);
+            color: #fbe5b5;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+        .hero h2 {
+            font-size: 24px;
+            color: #f3f4f6;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .hero p {
+            color: #9ca3af;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            max-width: 520px;
+        }
+        .hero-meta {
+            margin-top: 18px;
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #9ca3af;
+            flex-wrap: wrap;
+        }
+        .hero-meta span i {
+            color: #d8a552;
+            margin-right: 5px;
+        }
+
+        /* PHONE MOCKUP STYLING */
+        .hero-right {
+            flex: 1 1 340px;
+            display: flex;
+            justify-content: center;
+        }
+        .phone-frame {
+            width: 290px;
+            height: 540px;
+            background: #111318;
+            border: 3px solid rgba(216, 165, 82, 0.4);
+            border-radius: 44px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(216, 165, 82, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .phone-inner-screen {
+            width: 100%;
+            height: 100%;
+            background: #171922;
+            border-radius: 34px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .screen-header {
+            padding: 10px 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.6);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .screen-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+        .screen-content {
+            padding: 12px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* SECTION HEADINGS */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-tag {
+            color: #d8a552;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .section-title h3 {
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        /* SCREENSHOTS GRID */
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            margin-bottom: 80px;
+        }
+
+        /* GRID SECTIONS */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: rgba(216, 165, 82, 0.12);
+            color: #d8a552;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        /* HOW IT WORKS NUMBERS */
+        .step-num {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FBE5B5 0%, #D8A552 100%);
+            color: #0b0c10;
+            font-weight: 900;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: #070709;
+            padding: 60px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links button {
+            background: none;
+            border: none;
+            color: #9ca3af;
+            font-size: 14px;
+            font-family: inherit;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s;
+        }
+        .footer-links button:hover {
+            color: #d8a552;
+            text-decoration: underline;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 13px;
+            color: #6b7280;
+            padding-top: 25px;
+        }
+
+        /* POLICY MODAL (POPUP) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-box {
+            background: #12141a;
+            border: 1px solid rgba(216, 165, 82, 0.4);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 750px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9);
+            animation: modalFadeIn 0.3s ease;
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            color: #9ca3af;
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .modal-close:hover {
+            color: #d8a552;
+        }
+        .modal-body {
+            padding: 24px;
+            overflow-y: auto;
+            color: #d1d5db;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .modal-body h4 {
+            color: #fbe5b5;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            margin: 20px 0 8px;
+        }
+        .modal-body h4:first-child {
+            margin-top: 0;
+        }
+        .modal-body ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .no-return-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 12px 16px;
+            border-radius: 6px;
+            color: #fca5a5;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding-top: 30px;
+            }
+            .hero-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero h2 {
+                font-size: 19px;
+            }
+            .hero-meta {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (Sirf Logo aur Brand Name) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="https://i.postimg.cc/Y2QRSY5n/Airbrush-IMAGE-ENHANCER-1790025965960-1790025965962.jpg" alt="MYST Logo" class="logo-img">
+                <span class="brand-title font-luxury gold-text">MYST</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="container hero">
+        <div class="hero-left">
+            <div class="badge">
+                <span>✨</span> Official Mobile App
+            </div>
+
+            <h1 class="font-luxury gold-text">MYST</h1>
+            <h2 class="font-luxury">Luxury Customised Chocolates & Gifts</h2>
+
+            <p>
+                Handcrafted pure cocoa chocolates and tailored luxury gift hampers. Personalise your gift boxes with custom names, photos, and artisan flavours directly through the official MYST App.
+            </p>
+
+            <a href="myst.apk" download class="gold-btn">
+                <i class="fa-solid fa-download text-xl"></i>
+                <span>Download APK (Android)</span>
+            </a>
+
+            <div class="hero-meta">
+                <span><i class="fa-solid fa-shield-halved"></i> 100% Safe APK</span>
+                <span>•</span>
+                <span><i class="fa-brands fa-android"></i> Android 8.0+</span>
+                <span>•</span>
+                <span>Size: ~15 MB</span>
+            </div>
+        </div>
+
+        <!-- HERO RIGHT PHONE (Live App Preview 1) -->
+        <div class="hero-right">
+            <div class="phone-frame">
+                <div class="phone-inner-screen">
+                    <div class="screen-header">
+                        <span style="font-size: 11px; font-weight: bold; color: #d8a552;">MYST LUXURY</span>
+                        <i class="fa-solid fa-bell text-xs" style="color: #9ca3af;"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=500&auto=format&fit=crop&q=80" alt="App Preview" class="screen-img">
+                    <div class="screen-content">
+                        <div>
+                            <span style="font-size: 10px; color: #d8a552; text-transform: uppercase; font-weight: 700;">★ Best Seller</span>
+                            <h4 style="font-size: 14px; font-weight: 700; color: #fff; margin-top: 2px;">Royal Dark Truffle Box</h4>
+                            <p style="font-size: 11px; color: #9ca3af; margin-top: 4px;">Customised with Gold Foil Embossing & Name.</p>
+                        </div>
+                        <div style="background: rgba(216, 165, 82, 0.15); border: 1px dashed rgba(216, 165, 82, 0.4); border-radius: 8px; padding: 6px; text-align: center;">
+                            <span style="font-size: 11px; color: #fbe5b5; font-weight: bold;">Engraving: "Happy Birthday Priya ✨"</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+                            <span style="font-size: 14px; font-weight: 800; color: #fbe5b5;"></span>
+                            <span style="font-size: 10px; background: #d8a552; color: #000; font-weight: bold; padding: 4px 10px; border-radius: 6px;">Customise</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. APP SCREENSHOTS / MOCKUPS SECTION -->
+    <section class="container" style="padding: 40px 24px 70px;">
+        <div class="section-title">
+            <span class="section-tag">Inside The App</span>
+            <h3 class="font-luxury gold-text">App Screenshots</h3>
+            <p style="color: #9ca3af; font-size: 14px; margin-top: 8px;">Explore our luxury ordering and personalization screens.</p>
+        </div>
+
+        <div class="mockup-grid">
+            
+            <!-- Screenshot 1: Custom Gift Boxes -->
+            <div>
+                <div class="phone-frame">
+                    <div class="phone-inner-screen">
+                        <div class="screen-header">
+                            <span style="font-size: 11px; color: #d8a552; font-weight: 700;">1. Customise Box</span>
+                            <i class="fa-solid fa-wand-magic-sparkles text-xs" style="color: #d8a552;"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&auto=format&fit=crop&q=80" alt="Custom Box" class="screen-img">
+                        <div class="screen-content">
+                            <div>
+                                <h4 style="font-size: 13px; font-weight: 700; color: #fff;">Personalised Gift Hamper</h4>
+                                <p style="font-size: 11px; color: #9ca3af; margin-top: 2px;">Add photo, greeting card & custom ribbons.</p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px;">
+                                <div style="font-size: 10px; color: #d8a552;">Selected Ribbon: <b>Velvet Gold</b></div>
+                                <div style="font-size: 10px; color: #d8a552; margin-top: 2px;">Custom Card: <b>"Forever Yours ❤️"</b></div>
+                            </div>
+                            <div style="background: #d8a552; color: #000; text-align: center; padding: 6px; border-radius: 6px; font-size: 11px; font-weight: 800;">
+                                Save & Proceed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #d8a552; font-size: 13px; font-weight: 700; margin-top: 14px; text-transform: uppercase;">Customise Gifts</p>
+            </div>
+
+            <!-- Screenshot 2: Luxury Gift Hampers -->
+            <div>
+                <div class="phone-frame" style="border-color: rgba(216, 165, 82, 0.7); transform: scale(1.03);">
+                    <div class="phone-inner-screen">
+                        <div class="screen-header">
+                            <span style="font-size: 11px; color: #d8a552; font-weight: 700;">2. Luxury Gift Hampers</span>
+                            <i class="fa-solid fa-crown text-xs" style="color: #d8a552;"></i>
+                        </div>
+                        <img src="https://i.postimg.cc/ZnmMqcV0/Shakkr-Diwali-Hamper-Range-5.jpg" alt="Luxury Hampers" class="screen-img">
+                        <div class="screen-content">
+                            <div>
+                                <h4 style="font-size: 13px; font-weight: 700; color: #fff;">Royal Celebration Hamper</h4>
+                                <p style="font-size: 11px; color: #9ca3af; margin-top: 2px;">Assorted luxury chocolates & custom message bar.</p>
+                            </div>
+                            <div style="display: flex; gap: 4px;">
+                                <span style="font-size: 9px; background: rgba(216,165,82,0.2); color: #fbe5b5; padding: 2px 6px; border-radius: 4px;">👑 Premium</span>
+                                <span style="font-size: 9px; background: rgba(216,165,82,0.2); color: #fbe5b5; padding: 2px 6px; border-radius: 4px;">Handmade</span>
+                                <span style="font-size: 9px; background: rgba(216,165,82,0.2); color: #fbe5b5; padding: 2px 6px; border-radius: 4px;">Gold Foil</span>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #FBE5B5, #D8A552); color: #000; text-align: center; padding: 6px; border-radius: 6px; font-size: 11px; font-weight: 900;">
+                                Order Hamper
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #fbe5b5; font-size: 13px; font-weight: 800; margin-top: 14px; text-transform: uppercase;">Luxury Hampers</p>
+            </div>
+
+            <!-- Screenshot 3: Express Chilled Delivery -->
+            <div>
+                <div class="phone-frame">
+                    <div class="phone-inner-screen">
+                        <div class="screen-header">
+                            <span style="font-size: 11px; color: #d8a552; font-weight: 700;">3. Live Tracking</span>
+                            <i class="fa-solid fa-truck-fast text-xs" style="color: #10b981;"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1582293041079-7814c2f12063?w=500&auto=format&fit=crop&q=80" alt="Delivery Track" class="screen-img">
+                        <div class="screen-content">
+                            <div>
+                                <h4 style="font-size: 13px; font-weight: 700; color: #fff;">Order #MYST-9842</h4>
+                                <span style="font-size: 10px; color: #10b981; font-weight: bold;">● Out For Chilled Delivery</span>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px;">
+                                <div style="font-size: 10px; color: #9ca3af;">Packing: <b style="color:#fff;">Insulated Cold Pack ❄️</b></div>
+                                <div style="font-size: 10px; color: #9ca3af; margin-top: 2px;">ETA: <b style="color:#fff;">Today, by 4:00 PM</b></div>
+                            </div>
+                            <div style="border: 1px solid rgba(216, 165, 82, 0.5); color: #fbe5b5; text-align: center; padding: 6px; border-radius: 6px; font-size: 11px; font-weight: 700;">
+                                View Live Map
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #d8a552; font-size: 13px; font-weight: 700; margin-top: 14px; text-transform: uppercase;">Live Order Tracking</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. FEATURES SECTION -->
+    <section class="container" style="padding: 20px 24px 60px;">
+        <div class="section-title">
+            <span class="section-tag">Khaasiyat</span>
+            <h3 class="font-luxury gold-text">App Features</h3>
+        </div>
+
+        <div class="grid-3">
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h4 class="font-luxury" style="color: #fff; font-size: 18px; margin-bottom: 8px;">100% Personalised</h4>
+                <p style="font-size: 14px; color: #9ca3af;">Chocolates par photo, personalised embossed message ya dates aasaani se add karein.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-certificate"></i></div>
+                <h4 class="font-luxury" style="color: #fff; font-size: 18px; margin-bottom: 8px;">Pure Artisan Cocoa</h4>
+                <p style="font-size: 14px; color: #9ca3af;">Finest quality cacao beans se bani chocolate jo melt-in-mouth luxury taste deti hai.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-snowflake"></i></div>
+                <h4 class="font-luxury" style="color: #fff; font-size: 18px; margin-bottom: 8px;">Melt-Proof Delivery</h4>
+                <p style="font-size: 14px; color: #9ca3af;">Special insulated temperature-controlled packaging taaki gift perfect shape me deliver ho.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. HOW IT WORKS -->
+    <section class="container" style="padding: 20px 24px 80px;">
+        <div class="section-title">
+            <span class="section-tag">How It Works</span>
+            <h3 class="font-luxury gold-text">Kaise Use Karein?</h3>
+        </div>
+
+        <div class="grid-3">
+            <div class="card" style="text-align: center;">
+                <div class="step-num">1</div>
+                <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">Download APK</h4>
+                <p style="font-size: 14px; color: #9ca3af;">Download APK button par click karein aur MYST app install karein.</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <div class="step-num">2</div>
+                <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">Customise Box</h4>
+                <p style="font-size: 14px; color: #9ca3af;">Apne pasandida flavours chunein aur photo/naam personalise karein.</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <div class="step-num">3</div>
+                <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">Unbox Luxury</h4>
+                <p style="font-size: 14px; color: #9ca3af;">Fast chilled delivery ke saath aapka luxury box doorstep par receive karein.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                        <img src="https://i.postimg.cc/Y2QRSY5n/Airbrush-IMAGE-ENHANCER-1790025965960-1790025965962.jpg" alt="MYST" style="width: 35px; height: 35px; border-radius: 50%;">
+                        <span class="font-luxury gold-text" style="font-size: 22px; font-weight: 800;">MYST</span>
+                    </div>
+                    <p style="font-size: 13px; color: #9ca3af; line-height: 1.6;">
+                        Luxury Customised Chocolates & Gifts. Pure artisan cocoa handcrafted for your special moments.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-luxury gold-text" style="margin-bottom: 15px;">Contact</h5>
+                    <ul class="footer-links">
+                        <li style="color: #9ca3af; font-size: 14px;"><i class="fa-solid fa-envelope" style="color: #d8a552; margin-right: 8px;"></i> support@mystchocolates.com</li>
+                        <li style="color: #9ca3af; font-size: 14px;"><i class="fa-solid fa-phone" style="color: #d8a552; margin-right: 8px;"></i> +91 7846986313</li>
+                        <li style="color: #9ca3af; font-size: 14px;"><i class="fa-solid fa-location-dot" style="color: #d8a552; margin-right: 8px;"></i> India</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-luxury gold-text" style="margin-bottom: 15px;">Policies & Legal</h5>
+                    <ul class="footer-links">
+                        <li><button onclick="openModal('privacy')">Privacy Policy</button></li>
+                        <li><button onclick="openModal('terms')">Terms & Conditions</button></li>
+                        <li><button onclick="openModal('shipping')">Shipping & No-Return Policy</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © 2026 MYST App. All rights reserved. • Crafted for Pure Luxury ✨
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP MODAL (Single-file policy viewer) -->
+    <div id="policyModal" class="modal-overlay" onclick="closeModalOnBg(event)">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="font-luxury gold-text" style="font-size: 20px;">Policy</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modalContent" class="modal-body">
+                <!-- Content will be injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODALS -->
+    <script>
+        const policies = {
+            shipping: `
+                <div class="no-return-box">
+                    <strong>⚠️ STRICT NO-RETURN POLICY:</strong> Due to the perishable nature of gourmet confectionery and custom made-to-order gift hampers (with custom names, photos, engraved messages), <strong>all sales are strictly final. We do NOT accept returns or offer refunds once an order is dispatched.</strong>
+                </div>
+                <h4>1. Why Non-Returnable?</h4>
+                <p>Because our products are edible luxury chocolates and bespoke personalized gifts, they cannot be restocked or resold for health, hygiene, and safety reasons.</p>
+                
+                <h4>2. Damaged or Broken Items in Transit</h4>
+                <p>We use temperature-controlled insulated packaging to prevent melting. However, if your order arrives severely damaged during shipping:</p>
+                <ul>
+                    <li>Notify our support team within <strong>24 hours of delivery</strong>.</li>
+                    <li>Share your Order ID along with clear unboxing photos/videos showing the damaged box and chocolates.</li>
+                    <li>Upon verification, we will immediately dispatch a <strong>free replacement</strong>. Refunds are not issued.</li>
+                </ul>
+
+                <h4>3. Shipping & Delivery</h4>
+                <ul>
+                    <li><strong>Preparation:</strong> Custom boxes take 1–2 business days to handcraft.</li>
+                    <li><strong>Delivery Timeline:</strong> 2 to 5 business days across India.</li>
+                    <li><strong>Address Accuracy:</strong> Please ensure the delivery address is accurate. We are not liable for failed delivery due to wrong addresses.</li>
+                </ul>
+
+                <h4>4. Order Cancellation</h4>
+                <p>Orders can only be cancelled within <strong>2 hours</strong> of placing the order before crafting begins.</p>
+            `,
+            privacy: `
+                <h4>1. Information We Collect</h4>
+                <ul>
+                    <li><strong>Account & Contact:</strong> Name, phone number, email address, and shipping address.</li>
+                    <li><strong>Personalisation Data:</strong> Photos, custom messages, names, and dates submitted for gift printing.</li>
+                    <li><strong>Secure Payments:</strong> Payment transactions are handled via encrypted payment gateways. We never store card numbers or UPI PINs.</li>
+                </ul>
+
+                <h4>2. How We Use Your Data</h4>
+                <ul>
+                    <li>To handcraft, customize, and deliver your chocolate gift orders.</li>
+                    <li>To send order tracking alerts via WhatsApp, SMS, or Email.</li>
+                    <li>To provide customer support.</li>
+                </ul>
+
+                <h4>3. 100% Data Privacy</h4>
+                <p>We never sell, rent, or trade your personal details to third parties. Data is shared exclusively with verified delivery partners strictly for delivering packages.</p>
+            `,
+            terms: `
+                <h4>1. User Agreement</h4>
+                <p>By downloading the MYST App or placing an order, you agree to these Terms and Conditions.</p>
+
+                <h4>2. Customisation & Content</h4>
+                <p>Customers are responsible for verifying all spellings, names, and images uploaded for custom gift boxes. Any offensive or unlawful content will be rejected.</p>
+
+                <h4>3. Perishable Confectionery</h4>
+                <p>Chocolates must be stored in a cool, dry place (15°C–20°C) away from direct sunlight upon delivery. MYST is not responsible for spoilage resulting from improper storage after delivery.</p>
+
+                <h4>4. Intellectual Property</h4>
+                <p>The "MYST" brand name, logo, images, and app design are the exclusive property of MYST Chocolates & Gifts.</p>
+            `
+        };
+
+        const titles = {
+            shipping: 'Shipping & No-Return Policy',
+            privacy: 'Privacy Policy',
+            terms: 'Terms & Conditions'
+        };
+
+        function openModal(type) {
+            document.getElementById('modalTitle').innerText = titles[type];
+            document.getElementById('modalContent').innerHTML = policies[type];
+            document.getElementById('policyModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('policyModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModalOnBg(e) {
+            if (e.target.id === 'policyModal') {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+  </html>
